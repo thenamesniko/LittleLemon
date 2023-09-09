@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'restaurant',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'capstone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'LittleLemon',
+        'USER': 'postgres',  # Replace with your PostgreSQL username
+        'PASSWORD': 'tiger',  # Replace with your PostgreSQL password
+        'HOST': 'localhost',     # Set to the PostgreSQL server's hostname
+        'PORT': '5432',
     }
 }
 
